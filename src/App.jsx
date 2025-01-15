@@ -25,7 +25,7 @@ function App() {
       if(window.innerWidth < 720) {
         setSlidePerView(1);
       } else{
-        setSlidePerView(2);
+        setSlidePerView(3);
       }
     }
 
@@ -46,21 +46,20 @@ function App() {
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="indexcontato.html">Contato</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
       </nav>
 
       <main>
         <section class="hero">
-            <h1>Seja bem vindo ao nosso e-commerce com JS</h1>
-            <p>Encontre aqui seu produto!</p>
-            <div class="toggle-button" id="toggle-button">Menu</div>
+            <h1>Seja bem vindo ao nosso e-commerce</h1>
+            <p>Encontre aqui seu produto!</p>            
         </section>
         <section class="products">
             <h2>Produtos em destaque</h2>
             <div class="product-grid">
               <Swiper
-                slidesPerView={3}
+                slidesPerView={slidePerView}
                 pagination={{ clickable: true }}
                 navigation
               >
